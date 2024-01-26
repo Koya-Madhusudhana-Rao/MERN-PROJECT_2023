@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 const express = require('express');
 const app = express();
+=======
+
+
+const express = require('express');
+const app =express();
+>>>>>>> origin/master
 app.use(express.json());
 require('dotenv').config();
 const dbConfig = require('./config/dbConfig');
 const port = process.env.PORT || 5000;
 
 const usersRoute = require('./routes/usersRoute');
+<<<<<<< HEAD
 const productsRoute = require('./routes/productsRoute');
 const bidsRoute = require('./routes/bidsRoute');
 const notificationsRoute = require('./routes/notificationsRoute');
@@ -29,3 +37,9 @@ if (process.env.NODE_ENV === "production") {
 
 
 app.listen(port, () => console.log(`Node/Express Server started on port ${port}`));
+=======
+app.use('/api/users', usersRoute);
+
+
+app.listen(port, ()=> console.log(` Node/Express JS Server started on port ${port}`));
+>>>>>>> origin/master
